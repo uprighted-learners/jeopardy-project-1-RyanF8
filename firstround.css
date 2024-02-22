@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightcoral;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 3rem;
+   
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+ .catboard {
+    display: grid; 
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw; 
+}
+
+
+
+.category {
+    display: grid;
+    grid-template-columns: repeat(6,14vw); 
+    border: 1px solid black; 
+    text-align: center;
+    list-style-type: none;
+    padding: 0vw;
+    background-color: lightgray;
+} 
+
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(6,14vw);
+    border: 1px solid black;
+    text-align: center;
+    padding: 0vw;
+    list-style-type: none;
+    
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(6,14vw);
+    border: 1px solid black;
+    text-align: center;
+    padding: 0vw;
+    list-style-type: none;
+}
+
+.row3 {
+    display: grid;
+    grid-template-columns: repeat(6,14vw);
+    border: 1px solid black;
+    text-align: center;
+    padding: 0vw;
+    list-style-type: none;
+}
+
+.row4 {
+    display: grid;
+    grid-template-columns: repeat(6,14vw);
+    border: 1px solid black;
+    text-align: center;
+    padding: 0vw;
+    list-style-type: none;
+}
+
+.last {
+    display: grid;
+    grid-template-columns: repeat(6,14vw);
+    border: 1px solid black;
+    text-align: center;
+    padding: 0vw;
+    list-style-type: none;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding: 1rem;
+    border: 2px solid black;
+    background-color: lightgray;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    justify-content: space-evenly;
+}
+
+.guess {
+    margin: 1rem;
+    
+}
+.pass {
+    margin: 1rem;
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 2rem;
+    
+}
+
+.player1 {
+    background-color: lightblue;
+    padding: 1vw;
+}
+.player2 {
+    background-color: lightblue;
+    padding: 1vw;
+}
+
+.round2 {
+    display: flex;
+    position: absolute;
+    margin-top: 5vh;
+    right: 3vw;
+    background-color: aliceblue;
+    padding: 1vw;
+    text-decoration: none;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    margin: 0vw;
+    margin-right: 20px;
+    padding: 1vw;
+    background-color: antiquewhite;
+    position: relative;
+    text-align: center;
+    top: 14vh;
+    bottom: 0;
+    left: 1vw;
+    right: 1vw;
+}
+
+.footer a{
+    text-decoration: none;
+    color: darkblue;
+}
+
