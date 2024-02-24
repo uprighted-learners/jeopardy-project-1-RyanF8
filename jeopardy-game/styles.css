@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: skyblue;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 1rem 5rem;
+    padding: 1rem;
+    background-color: aquamarine;
+
+
+}
+
+.gif {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+.first {
+    display: block;
+    margin-top: 2rem;
+    margin-inline-start: 25%;
+    margin-inline-end: 25%;
+    padding: 2rem;
+    text-align: center;
+    background-color: coral;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin: 2rem;
+    padding: 2rem;
+    background-color: antiquewhite;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+}
+
+.footer a{
+    text-decoration: none;
+    color: darkblue;
+}
+

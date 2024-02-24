@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: seagreen;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 3rem;
+   
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.finalc {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding: 1vw;
+    background-color: lightgray;
+}
+
+.finalq {
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin-top: 1rem;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    padding: 5vw;
+    background-color: lightgray;
+}
+
+.answer-box {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 20vh);
+    grid-template-rows: repeat(3, 4vh);
+    margin-top: 3vh;
+    
+}
+
+.point {
+    padding: 1vh;
+    color: gray;
+    border: solid black;
+    background-color: aliceblue;
+}
+.answer {
+    padding: 1vh;
+    color: gray;
+    border: solid black;
+    background-color: aliceblue;
+}
+
+.final-bet {
+    display: flex;
+    justify-content: center;
+}
+.bet {
+    padding: 1vw 2vh;
+    font-size: 2vh;
+    border: 3px solid black;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin: 2vw;
+    padding: 2vw;
+    background-color: antiquewhite;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    left: 1vw;
+    right: 1vw;
+}
+
+.footer a{
+    text-decoration: none;
+    color: darkblue;
+}
+
+
