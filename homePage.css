@@ -25,7 +25,7 @@ body {
     width: 60%;
 }
 
-.first {
+#startGame {
     display: block;
     margin-top: 2rem;
     margin-inline-start: 25%;
@@ -40,20 +40,23 @@ body {
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    margin: 0rem;
-    padding: 1rem;
+    grid-template-columns: repeat(4, 20vw);
+    margin-top: 15vw;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1vw;
     background-color: antiquewhite;
     position: relative;
     text-align: center;
-    top: 10vh;
+    top: 0vh;
     bottom: 0;
-    left: 1rem;
-    right: 1rem;
+    
 }
 
 .footer a{
     text-decoration: none;
     color: darkblue;
 }
+
+
 

@@ -98,7 +98,7 @@ h3 {
     margin-right: 20vw;
     padding: 1rem;
     border: 2px solid black;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 .buttons {
@@ -108,11 +108,11 @@ h3 {
     justify-content: space-evenly;
 }
 
-.guess {
+#guess {
     margin: 1rem;
     
 }
-.pass {
+#pass {
     margin: 1rem;
 }
 
@@ -126,16 +126,16 @@ h3 {
     
 }
 
-.player1 {
+#player1 {
     background-color: lightblue;
     padding: 1vw;
 }
-.player2 {
+#player2 {
     background-color: lightblue;
     padding: 1vw;
 }
 
-.round2 {
+#round2 {
     display: flex;
     position: absolute;
     margin-top: 5vh;
@@ -147,21 +147,22 @@ h3 {
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(4, 25vw);
-    margin: 0vw;
+    grid-template-columns: repeat(4, 20vw);
+    margin-top: 15vw;
     margin-right: 20px;
+    margin-left: 20px;
     padding: 1vw;
     background-color: antiquewhite;
     position: relative;
     text-align: center;
     top: 14vh;
     bottom: 0;
-    left: 1vw;
-    right: 1vw;
+    
 }
 
 .footer a{
     text-decoration: none;
     color: darkblue;
 }
+
 

@@ -79,20 +79,24 @@ h3 {
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    margin: 1vw;
-    padding: 2vw;
+    grid-template-columns: repeat(4, 20vw);
+    margin-top: 15vw;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1vw;
     background-color: antiquewhite;
-    position: fixed;
+    position: relative;
     text-align: center;
+    top: 23vh;
     bottom: 0;
-    left: 1vw;
-    right: 1vw;
+    
 }
 
 .footer a{
     text-decoration: none;
     color: darkblue;
 }
+
+
 
 
