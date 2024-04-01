@@ -90,12 +90,13 @@ h3 {
     list-style-type: none;
 }
 
-.input {
+#input {
     display: flex;
+    text-align: center;
     justify-content: center;
-    margin-top: 2vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1rem;
     border: 2px solid black;
     background-color: whitesmoke;
@@ -155,9 +156,8 @@ h3 {
     background-color: antiquewhite;
     position: relative;
     text-align: center;
-    top: 14vh;
+    top: 15vh;
     bottom: 0;
-    
 }
 
 .footer a{
