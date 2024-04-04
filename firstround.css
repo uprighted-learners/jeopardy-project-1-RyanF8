@@ -44,6 +44,8 @@ h3 {
 } 
 
 
+
+
 .row1 {
     display: grid;
     grid-template-columns: repeat(6,14vw);
@@ -51,7 +53,15 @@ h3 {
     text-align: center;
     padding: 0vw;
     list-style-type: none;
-    
+    appearance: none;
+}
+.row1 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .row2 {
@@ -62,6 +72,14 @@ h3 {
     padding: 0vw;
     list-style-type: none;
 }
+.row2 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .row3 {
     display: grid;
@@ -70,6 +88,14 @@ h3 {
     text-align: center;
     padding: 0vw;
     list-style-type: none;
+}
+.row3 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .row4 {
@@ -80,8 +106,16 @@ h3 {
     padding: 0vw;
     list-style-type: none;
 }
+.row4 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
 
-.last {
+.row5 {
     display: grid;
     grid-template-columns: repeat(6,14vw);
     border: 1px solid black;
@@ -89,8 +123,44 @@ h3 {
     padding: 0vw;
     list-style-type: none;
 }
+.row5 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+li {
+    border: 1px solid black;
+}
 
-#input {
+#answerForm {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 1vw;
+    font-size: 2rem;
+}
+
+#input{
+    font-size: 1rem;
+    padding: 1vw;
+    margin-left: 2vw;
+}
+#submitButton {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: large;
+}
+#passButton {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: large;
+}
+
+/* #answerForm {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -100,20 +170,20 @@ h3 {
     padding: 1rem;
     border: 2px solid black;
     background-color: whitesmoke;
-}
+} */
 
-.buttons {
+/* .buttons {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
     justify-content: space-evenly;
-}
+} */
 
-#guess {
+/* #submitAnswer {
     margin: 1rem;
     
-}
-#pass {
+} */
+#passTurn {
     margin: 1rem;
 }
 
@@ -164,5 +234,6 @@ h3 {
     text-decoration: none;
     color: darkblue;
 }
+
 
 

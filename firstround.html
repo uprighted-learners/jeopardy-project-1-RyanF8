@@ -12,68 +12,71 @@
 
     <div class = "catboard">
         <ul class="category">
-            <li class = category>catergory</li>
-            <li class = category>catergory</li>
-            <li class = category>catergory</li>
-            <li class = category>catergory</li>
-            <li class = category>catergory</li>
-            <li class = category>catergory</li>
+            <li class = category>Nature</li>
+            <li class = category>Animals</li>
+            <li class = category>Computers</li>
+            <li class = category>Mythology</li>
+            <li class = category>History</li>
+            <li class = category>General</li>
            
         </ul>
         <ul class="row1">
-            <li class = row1>200</li>
-            <li class = row1>200</li>
-            <li class = row1>200</li>
-            <li class = row1>200</li>
-            <li class = row1>200</li>
-            <li class = row1>200</li>
+            <button><li class = r1c1>200</li></button>
+            <button><li class = r1c2>200</li></button>
+            <button><li class = r1c3>200</li></button>
+            <button><li class = r1c4>200</li></button>
+            <button><li class = r1c5>200</li></button>
+            <button><li class = r1c6>200</li></button>
             
         </ul>
         <ul class = "row2">
-            <li class = row2>400</li>
-            <li class = row2>400</li>
-            <li class = row2>400</li>
-            <li class = row2>400</li>
-            <li class = row2>400</li>
-            <li class = row2>400</li>
+            <button><li class = r2c1>400</li></button>
+            <button><li class = r2c2>400</li></button>
+            <button><li class = r2c3>400</li></button>
+            <button><li class = r2c4>400</li></button>
+            <button><li class = r2c5>400</li></button>
+            <button><li class = r2c6>400</li></button>
            
         </ul>
         <ul class = "row3">
-            <li class = row3>600</li>
-            <li class = row3>600</li>
-            <li class = row3>600</li>
-            <li class = row3>600</li>
-            <li class = row3>600</li>
-            <li class = row3>600</li>
+            <button><li class = r3c1>600</li></button>
+            <button><li class = r3c2>600</li></button>
+            <button><li class = r3c3>600</li></button>
+            <button><li class = r3c4>600</li></button>
+            <button><li class = r3c5>600</li></button>
+            <button><li class = r3c6>600</li></button>
             
         </ul>
         <ul class = "row4">
-            <li class = row4>800</li>
-            <li class = row4>800</li>
-            <li class = row4>800</li>
-            <li class = row4>800</li>
-            <li class = row4>800</li>
-            <li class = row4>800</li>
+            <button><li class = r4c1>800</li></button>  
+            <button><li class = r4c2>800</li></button>
+            <button><li class = r4c3>800</li></button>
+            <button><li class = r4c4>800</li></button>
+            <button><li class = r4c5>800</li></button>
+            <button><li class = r4c6>800</li></button>
         </ul>
-        <ul class = "last">
-            <li class = last>1000</li>
-            <li class = last>1000</li>
-            <li class = last>1000</li>
-            <li class = last>1000</li>
-            <li class = last>1000</li>
-            <li class = last>1000</li>
+        <ul class = "row5">
+            <button><li class = r5c1>1000</li></button>
+            <button><li class = r5c2>1000</li></button>
+            <button><li class = r5c3>1000</li></button>
+            <button><li class = r5c4>1000</li></button>
+            <button><li class = r5c5>1000</li></button>
+            <button><li class = r5c6>1000</li></button>
         </ul>
         
     </div>
     
-    
+    <form id="answerForm">
+    <label for="inputAnswer">Player Answer</label>
     <input type="text" id="input" placeholder="Player Answer"/>
+    <button id="submitButton" type='Submit'>Submit</button>
+    <button id="passButton" type="pass">Pass</button>
+    </form>
     
-    
-    <div class = "buttons">
-        <button><h4 id = "guess"> Submit Answer</h4></button>
-        <button><h4 id = "pass"> Pass Turn</h4></button>
-    </div>
+    <!-- <div class = "buttons">
+        <button><h4 id = "submitAnswer"> Submit Answer</h4></button>
+        <button><h4 id = "passTurn"> Pass Turn</h4></button>
+    </div> -->
 
     <div class = "players">
         <p id = "player1"> Player 1 Score: 0 </p>
@@ -94,6 +97,6 @@
     
     
 
-<script type="module" src = "index.js"> </script>
+<script type="module" src = "./index.js"> </script>
 </body>
 </html>

@@ -51,7 +51,15 @@ h3 {
     text-align: center;
     padding: 0vw;
     list-style-type: none;
-    
+    appearance: none;
+}
+.row1 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .row2 {
@@ -62,6 +70,14 @@ h3 {
     padding: 0vw;
     list-style-type: none;
 }
+.row2 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .row3 {
     display: grid;
@@ -70,6 +86,14 @@ h3 {
     text-align: center;
     padding: 0vw;
     list-style-type: none;
+}
+.row3 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .row4 {
@@ -80,14 +104,33 @@ h3 {
     padding: 0vw;
     list-style-type: none;
 }
+.row4 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
 
-.last {
+.row5 {
     display: grid;
     grid-template-columns: repeat(6,14vw);
     border: 1px solid black;
     text-align: center;
     padding: 0vw;
     list-style-type: none;
+}
+.row5 button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+li {
+    border: 1px solid black;
 }
 
 #input {
