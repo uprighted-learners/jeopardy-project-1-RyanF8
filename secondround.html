@@ -1,98 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Second Round</title>
-    <link href = "secondround.css" rel = "stylesheet">
-</head>
-<body>
-    <h1 class = "title"> Second Round </h1>
-    <h3> Player Turn </h3>
+    <link href="secondround.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="title">Second Round</h1>
+    <h3>Player Turn</h3>
 
-    <div class = "catboard">
-        <ul class="category">
-            <li class = category>Nature</li>
-            <li class = category>Animals</li>
-            <li class = category>Computers</li>
-            <li class = category>Mythology</li>
-            <li class = category>History</li>
-            <li class = category>General</li>
-           
-        </ul>
-        <ul class="row1">
-            <button><li class = r1c1R2>400</li></button>
-            <button><li class = r1c2R2>400</li></button>
-            <button><li class = r1c3R2>400</li></button>
-            <button><li class = r1c4R2>400</li></button>
-            <button><li class = r1c5R2>400</li></button>
-            <button><li class = r1c6R2>400</li></button>
-            
-        </ul>
-        <ul class = "row2">
-            <button><li class = r2c1R2>800</li></button>
-            <button><li class = r2c2R2>800</li></button>
-            <button><li class = r2c3R2>800</li></button>
-            <button><li class = r2c4R2>800</li></button>
-            <button><li class = r2c5R2>800</li></button>
-            <button><li class = r2c6R2>800</li></button>
-           
-        </ul>
-        <ul class = "row3">
-            <button><li class = r3c1R2>1200</li></button>
-            <button><li class = r3c2R2>1200</li></button>
-            <button><li class = r3c3R2>1200</li></button>
-            <button><li class = r3c4R2>1200</li></button>
-            <button><li class = r3c5R2>1200</li></button>
-            <button><li class = r3c6R2>1200</li></button>
-            
-        </ul>
-        <ul class = "row4">
-            <button><li class = r4c1R2>1600</li></button>  
-            <button><li class = r4c2R2>1600</li></button>
-            <button><li class = r4c3R2>1600</li></button>
-            <button><li class = r4c4R2>1600</li></button>
-            <button><li class = r4c5R2>1600</li></button>
-            <button><li class = r4c6R2>1600</li></button>
-        </ul>
-        <ul class = "row5">
-            <button><li class = r5c1R2>2000</li></button>
-            <button><li class = r5c2R2>2000</li></button>
-            <button><li class = r5c3R2>2000</li></button>
-            <button><li class = r5c4R2>2000</li></button>
-            <button><li class = r5c5R2>2000</li></button>
-            <button><li class = r5c6R2>2000</li></button>
-        </ul>
-        
+    <div class="catboard">
+      <ul class="category">
+        <li class="category">Nature</li>
+        <li class="category">Animals</li>
+        <li class="category">Computers</li>
+        <li class="category">Mythology</li>
+        <li class="category">History</li>
+        <li class="category">General</li>
+      </ul>
+      <ul class="row1">
+        <button
+          data-round="second"
+          data-category="categoryOne"
+          data-value="400"
+        >
+          <li class="r1c1R2">400</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryTwo"
+          data-value="400"
+        >
+          <li class="r1c2R2">400</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryThree"
+          data-value="400"
+        >
+          <li class="r1c3R2">400</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFour"
+          data-value="400"
+        >
+          <li class="r1c4R2">400</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFive"
+          data-value="400"
+        >
+          <li class="r1c5R2">400</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categorySix"
+          data-value="400"
+        >
+          <li class="r1c6R2">400</li>
+        </button>
+      </ul>
+      <ul class="row2">
+        <button
+          data-round="second"
+          data-category="categoryOne"
+          data-value="800"
+        >
+          <li class="r2c1R2">800</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryTwo"
+          data-value="800"
+        >
+          <li class="r2c2R2">800</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryThree"
+          data-value="800"
+        >
+          <li class="r2c3R2">800</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFour"
+          data-value="800"
+        >
+          <li class="r2c4R2">800</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFive"
+          data-value="800"
+        >
+          <li class="r2c5R2">800</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categorySix"
+          data-value="800"
+        >
+          <li class="r2c6R2">800</li>
+        </button>
+      </ul>
+      <ul class="row3">
+        <button
+          data-round="second"
+          data-category="categoryOne"
+          data-value="1200"
+        >
+          <li class="r3c1R2">1200</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryTwo"
+          data-value="1200"
+        >
+          <li class="r3c2R2">1200</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryThree"
+          data-value="1200"
+        >
+          <li class="r3c3R2">1200</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFour"
+          data-value="1200"
+        >
+          <li class="r3c4R2">1200</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFive"
+          data-value="1200"
+        >
+          <li class="r3c5R2">1200</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categorySix"
+          data-value="1200"
+        >
+          <li class="r3c6R2">1200</li>
+        </button>
+      </ul>
+      <ul class="row4">
+        <button
+          data-round="second"
+          data-category="categoryOne"
+          data-value="1600"
+        >
+          <li class="r4c1R2">1600</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryTwo"
+          data-value="1600"
+        >
+          <li class="r4c2R2">1600</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryThree"
+          data-value="1600"
+        >
+          <li class="r4c3R2">1600</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFour"
+          data-value="1600"
+        >
+          <li class="r4c4R2">1600</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFive"
+          data-value="1600"
+        >
+          <li class="r4c5R2">1600</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categorySix"
+          data-value="1600"
+        >
+          <li class="r4c6R2">1600</li>
+        </button>
+      </ul>
+      <ul class="row5">
+        <button
+          data-round="second"
+          data-category="categoryOne"
+          data-value="2000"
+        >
+          <li class="r5c1R2">2000</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryTwo"
+          data-value="2000"
+        >
+          <li class="r5c2R2">2000</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryThree"
+          data-value="2000"
+        >
+          <li class="r5c3R2">2000</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFour"
+          data-value="2000"
+        >
+          <li class="r5c4R2">2000</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categoryFive"
+          data-value="2000"
+        >
+          <li class="r5c5R2">2000</li>
+        </button>
+        <button
+          data-round="second"
+          data-category="categorySix"
+          data-value="2000"
+        >
+          <li class="r5c6R2">2000</li>
+        </button>
+      </ul>
     </div>
-    
- 
-    <input type="text" id="input" placeholder="Player Answer"/>
-    
-    <div class = "buttons">
-        <button><h4 id = "guess"> Submit Answer</h4></button>
-        <button><h4 id = "pass"> Pass Turn</h4></button>
+
+    <input type="text" id="input" placeholder="Player Answer" />
+
+    <div class="buttons">
+      <button><h4 id="guess">Submit Answer</h4></button>
+      <button><h4 id="pass">Pass Turn</h4></button>
     </div>
 
-    <div class = "players">
-        <p id = "player1"> Player 1 Score: 0 </p>
-        <p id = "player2"> Player 2 Score: 0 </p>
+    <div class="players">
+      <p id="player1">Player 1 Score: 0</p>
+      <p id="player2">Player 2 Score: 0</p>
     </div>
 
-    <a id = "finalround" href = "finalround.html"> Final Round </a>
+    <a id="finalround" href="finalround.html"> Final Round </a>
 
-    <h3 id = "playerTurn">Player 1's Turn</h3>
+    <h3 id="playerTurn">Player 1's Turn</h3>
 
-    <footer class = "footer">
-        <a href = "homePage.html"> Home Page </a>
-        <a href = "#"> What To Expect </a>
-        <a href = "#"> Meet The Team </a>
-        <a href = "#"> About Us </a>
-        
+    <footer class="footer">
+      <a href="homePage.html"> Home Page </a>
+      <a href="#"> What To Expect </a>
+      <a href="#"> Meet The Team </a>
+      <a href="#"> About Us </a>
     </footer>
-    
-    
 
-    <script type="module" src = "./index.js"> </script>
-</body>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

@@ -1,102 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Round</title>
-    <link href = "firstround.css" rel = "stylesheet">
-</head>
-<body>
-    <h1 class = "title"> First Round </h1>
-    <h3> Player Turn </h3>
+    <link href="firstround.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="title">First Round</h1>
+    <h3>Player Turn</h3>
 
-    <div class = "catboard">
-        <ul class="category">
-            <li class = category>Nature</li>
-            <li class = category>Animals</li>
-            <li class = category>Computers</li>
-            <li class = category>Mythology</li>
-            <li class = category>History</li>
-            <li class = category>General</li>
-           
-        </ul>
-        <ul class="row1">
-            <button><li class = r1c1>200</li></button>
-            <button><li class = r1c2>200</li></button>
-            <button><li class = r1c3>200</li></button>
-            <button><li class = r1c4>200</li></button>
-            <button><li class = r1c5>200</li></button>
-            <button><li class = r1c6>200</li></button>
-            
-        </ul>
-        <ul class = "row2">
-            <button><li class = r2c1>400</li></button>
-            <button><li class = r2c2>400</li></button>
-            <button><li class = r2c3>400</li></button>
-            <button><li class = r2c4>400</li></button>
-            <button><li class = r2c5>400</li></button>
-            <button><li class = r2c6>400</li></button>
-           
-        </ul>
-        <ul class = "row3">
-            <button><li class = r3c1>600</li></button>
-            <button><li class = r3c2>600</li></button>
-            <button><li class = r3c3>600</li></button>
-            <button><li class = r3c4>600</li></button>
-            <button><li class = r3c5>600</li></button>
-            <button><li class = r3c6>600</li></button>
-            
-        </ul>
-        <ul class = "row4">
-            <button><li class = r4c1>800</li></button>  
-            <button><li class = r4c2>800</li></button>
-            <button><li class = r4c3>800</li></button>
-            <button><li class = r4c4>800</li></button>
-            <button><li class = r4c5>800</li></button>
-            <button><li class = r4c6>800</li></button>
-        </ul>
-        <ul class = "row5">
-            <button><li class = r5c1>1000</li></button>
-            <button><li class = r5c2>1000</li></button>
-            <button><li class = r5c3>1000</li></button>
-            <button><li class = r5c4>1000</li></button>
-            <button><li class = r5c5>1000</li></button>
-            <button><li class = r5c6>1000</li></button>
-        </ul>
-        
+    <div class="catboard">
+      <ul class="category">
+        <li class="category">Nature</li>
+        <li class="category">Animals</li>
+        <li class="category">Computers</li>
+        <li class="category">Mythology</li>
+        <li class="category">History</li>
+        <li class="category">General</li>
+      </ul>
+      <ul class="row1">
+        <button data-category="categoryOne" data-value="200">
+          <li class="r1c1">200</li>
+        </button>
+        <button data-category="categoryTwo" data-value="400">
+          <li class="r1c2">200</li>
+        </button>
+        <button data-category="categoryThree" data-value="600">
+          <li class="r1c3">200</li>
+        </button>
+        <button data-category="categoryFour" data-value="800">
+          <li class="r1c4">200</li>
+        </button>
+        <button data-category="categoryFive" data-value="1000">
+          <li class="r1c5">200</li>
+        </button>
+        <button data-category="categorySix" data-value="1200">
+          <li class="r1c6">200</li>
+        </button>
+      </ul>
+      <ul class="row2">
+        <button data-category="categoryOne" data-value="400">
+          <li class="r2c1">400</li>
+        </button>
+        <button data-category="categoryTwo" data-value="400">
+          <li class="r2c2">400</li>
+        </button>
+        <button data-category="categoryThree" data-value="400">
+          <li class="r2c3">400</li>
+        </button>
+        <button data-category="categoryFour" data-value="400">
+          <li class="r2c4">400</li>
+        </button>
+        <button data-category="categoryFive" data-value="400">
+          <li class="r2c5">400</li>
+        </button>
+        <button data-category="categorySix" data-value="400">
+          <li class="r2c6">400</li>
+        </button>
+      </ul>
+      <ul class="row3">
+        <button data-category="categoryOne" data-value="600">
+          <li class="r3c1">600</li>
+        </button>
+        <button data-category="categoryTwo" data-value="600">
+          <li class="r3c2">600</li>
+        </button>
+        <button data-category="categoryThree" data-value="600">
+          <li class="r3c3">600</li>
+        </button>
+        <button data-category="categoryFour" data-value="600">
+          <li class="r3c4">600</li>
+        </button>
+        <button data-category="categoryFive" data-value="600">
+          <li class="r3c5">600</li>
+        </button>
+        <button data-category="categorySix" data-value="600">
+          <li class="r3c6">600</li>
+        </button>
+      </ul>
+      <ul class="row4">
+        <button data-category="categoryOne" data-value="800">
+          <li class="r4c1">800</li>
+        </button>
+        <button data-category="categoryTwo" data-value="800">
+          <li class="r4c2">800</li>
+        </button>
+        <button data-category="categoryThree" data-value="800">
+          <li class="r4c3">800</li>
+        </button>
+        <button data-category="categoryFour" data-value="800">
+          <li class="r4c4">800</li>
+        </button>
+        <button data-category="categoryFive" data-value="800">
+          <li class="r4c5">800</li>
+        </button>
+        <button data-category="categorySix" data-value="800">
+          <li class="r4c6">800</li>
+        </button>
+      </ul>
+      <ul class="row5">
+        <button data-category="categoryOne" data-value="1000">
+          <li class="r5c1">1000</li>
+        </button>
+        <button data-category="categoryTwo" data-value="1000">
+          <li class="r5c2">1000</li>
+        </button>
+        <button data-category="categoryThree" data-value="1000">
+          <li class="r5c3">1000</li>
+        </button>
+        <button data-category="categoryFour" data-value="1000">
+          <li class="r5c4">1000</li>
+        </button>
+        <button data-category="categoryFive" data-value="1000">
+          <li class="r5c5">1000</li>
+        </button>
+        <button data-category="categorySix" data-value="1000">
+          <li class="r5c6">1000</li>
+        </button>
+      </ul>
     </div>
-    
+
     <form id="answerForm">
-    <label for="inputAnswer">Player Answer</label>
-    <input type="text" id="input" placeholder="Player Answer"/>
-    <button id="submitButton" type='Submit'>Submit</button>
-    <button id="passButton" type="pass">Pass</button>
+      <label for="inputAnswer">Player Answer</label>
+      <input type="text" id="input" placeholder="Player Answer" />
+      <button id="submitButton" type="Submit">Submit</button>
+      <button id="passButton" type="pass">Pass</button>
     </form>
-    
+
     <!-- <div class = "buttons">
         <button><h4 id = "submitAnswer"> Submit Answer</h4></button>
         <button><h4 id = "passTurn"> Pass Turn</h4></button>
     </div> -->
 
-    <div class = "players">
-        <p id = "player1"> Player 1 Score: 0 </p>
-        <p id = "player2"> Player 2 Score: 0 </p>
+    <div class="players">
+      <p id="player1">Player 1 Score: 0</p>
+      <p id="player2">Player 2 Score: 0</p>
     </div>
 
-    <a id = "round2" href = "secondround.html"> Next Round </a>
+    <a id="round2" href="secondround.html"> Next Round </a>
 
-    <h3 id = "playerTurn">Player 1's Turn</h3>
+    <h3 id="playerTurn">Player 1's Turn</h3>
 
-    <footer class = "footer">
-        <a href = "homePage.html"> Home Page </a>
-        <a href = "#"> What To Expect </a>
-        <a href = "#"> Meet The Team </a>
-        <a href = "#"> About Us </a>
-        
+    <footer class="footer">
+      <a href="homePage.html"> Home Page </a>
+      <a href="#"> What To Expect </a>
+      <a href="#"> Meet The Team </a>
+      <a href="#"> About Us </a>
     </footer>
-    
-    
 
-<script type="module" src = "./index.js"> </script>
-</body>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
