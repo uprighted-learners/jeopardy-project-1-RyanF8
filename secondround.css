@@ -133,7 +133,32 @@ li {
     border: 1px solid black;
 }
 
-#input {
+#answerForm {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 1vw;
+    font-size: 2rem;
+}
+
+#input{
+    font-size: 1rem;
+    padding: 1vw;
+    margin-left: 2vw;
+}
+#submitButton {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: large;
+}
+#passButton {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: large;
+}
+
+/* #input {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -150,15 +175,15 @@ li {
     justify-content: center;
     margin-top: 3rem;
     justify-content: space-evenly;
-}
+} */
 
-#guess {
+/* #guess {
     margin: 1rem;
     
 }
 #pass {
     margin: 1rem;
-}
+} */
 
 .players {
     display: flex;

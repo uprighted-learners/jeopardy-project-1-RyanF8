@@ -4,6 +4,7 @@ async function getQuestions() {
 }
 
 const allQuestions = await getQuestions();
+console.log(allQuestions)
 
 function findQuestion(category, value, round) {
     const questions = allQuestions[category];
