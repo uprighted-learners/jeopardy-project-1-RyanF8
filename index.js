@@ -28,6 +28,20 @@ function findQuestion(category, value, round) {
     return questions[questionIndex];
 }
 
+function findAnswer(answer, value, round) {
+    const answers = allQuestions[answer]
+    const answerValue = parseInt(value, 10)
+    const half = answers.length / 2;
+    let answerIndex;
+
+    if (round === 'first') {
+        answerIndex = index % half;
+    } else {
+        answerIndex = Math.floor(index / 2) + half;
+    }
+    return answers[answerIndex]
+}
+
 // Add event listeners to each button
 document.querySelectorAll('button[data-category][data-value]').forEach(button => {
     button.addEventListener('click', function () {
@@ -38,7 +52,10 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
         const question = findQuestion(category, value, round);
 
         // Now, display the question - Replace this alert with your actual display logic.
-        alert(question.question);
+        document.getElementById('questionForm').style.display = 'block';
+        document.getElementById('inputQuestion').innerText = question.question;
+        document.querySelector('.catboard').style.display = 'none';
+        
     });
 });
 
@@ -72,3 +89,5 @@ think about state machine when implementing score up or down
 
 // export default placeholderQuestions;
 // import placeholderQuestions from "../placeholder-questions.json";
+//use your catboard div to hide your jeopardy board and display the question + answer box
+//write out your player points so that it just adds one point then find where that value of the question lays and use that
