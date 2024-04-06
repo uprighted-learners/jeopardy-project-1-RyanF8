@@ -52,32 +52,31 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
 function submitAnswer() {
     const submitButton = document.getElementById('submitAnswer')
     const answerInput = document.getElementById('answerInput')
+    const passButton = document.getElementById('passQuestion');
+        passButton.addEventListener('click', (event) => {//if pass is press then switch player
+            event.preventDefault();
+            switchPlayer();
+        })
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
         const answerValue = answerInput.value.toLowerCase();;
         console.log(answerValue)
-    
+        
     const correctAnswer = allQuestions.find(q => q.questions.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
 
-    if (answerValue === correctAnswer) {
+    if (answerValue === correctAnswer) {//if answer is correct then alert the players and add points to the current player
         alert('Correct!');
-
-        //increment player score
         scores[`player${currentPlayer}`] += 1;
         document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
         
-    } else if (answerValue !== correctAnswer) {
+    } else {//if answer is wrong the subtract points and switch players
         alert('Wrong Answer!')
         scores[`player${currentPlayer}`] -= 1;
         document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
-    } else {
-        const passButton = document.getElementById('passQuestion');
-        passButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            findQuestion();
-        })
-    }
-    })
+        switchPlayer();
+        }
+    }) 
+    
 }
 submitAnswer();
 
