@@ -45,6 +45,13 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
         document.getElementById('questionForm').style.display = 'block';
         document.getElementById('inputQuestion').innerText = question.question;
         document.querySelector('.catboard').style.display = 'none';
+        //hide clicked boxes
+        const questionValue = parseInt(value, 10);
+        const valueIncrements = [200, 400, 600, 800, 1000, 1200, 1600, 2000];
+        const index = valueIncrements.indexOf(questionValue);
+        //hide questions that were clicked(this doesnt work right now but its close)
+        // document.getElementsByClassName('catboard')[index].style.pointerEvents = "none";
+        // document.getElementsByClassName('catboard')[index].style.opacity = "0.5";
         
     });
 });
@@ -59,12 +66,12 @@ function submitAnswer() {
         })
     submitButton.addEventListener('click', (event) => {
         event.preventDefault();
-        const answerValue = answerInput.value.toLowerCase();;
-        console.log(answerValue)
+        const answerValue = answerInput.value.toLowerCase();
+        console.log(answerValue);
         
-    const correctAnswer = allQuestions.find(q => q.questions.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
+    // const correctAnswer = allQuestions.find(q => q.questions.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
 
-    if (answerValue === correctAnswer) {//if answer is correct then alert the players and add points to the current player
+    if (answerValue) {//if answer is correct then alert the players and add points to the current player
         alert('Correct!');
         scores[`player${currentPlayer}`] += 1;
         document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
@@ -75,8 +82,12 @@ function submitAnswer() {
         document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
         switchPlayer();
         }
-    }) 
-    
+
+    // after answer, clear the answer field, hide the question, and show the categories again
+    document.getElementById('answerInput').value = '';
+    document.getElementById('questionForm').style.display = 'none';
+    document.querySelector('.catboard').style.display = 'grid';
+    })   
 }
 submitAnswer();
 

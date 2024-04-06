@@ -149,25 +149,17 @@ li {
     font-size: 1.2rem;
 }
 
-.players {
+#passTurn {
+    margin: 1rem;
+}
+
+#players {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
     margin-left: 10vw;
     margin-right: 10vw;
     font-size: 2rem;
-    
-}
-
-#player1 {
-    background-color: lightgray;
-    padding: 1vw;
-    
-}
-
-#player2 {
-    background-color: lightgray;
-    padding: 1vw;
 }
 
 #finalround {

@@ -151,33 +151,6 @@ li {
     font-size: 1.2rem;
 }
 
-
-
-
-
-/* #answerForm {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 2vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    border: 2px solid black;
-    background-color: whitesmoke;
-} */
-
-/* .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    justify-content: space-evenly;
-} */
-
-/* #submitAnswer {
-    margin: 1rem;
-    
-} */
 #passTurn {
     margin: 1rem;
 }
