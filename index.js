@@ -1,12 +1,12 @@
-async function getQuestions() {
+async function getQuestions() { //async funtion to fetch the data from my json folder
     let fetchReturn = await fetch('./placeholderQuestions.json');
     return await fetchReturn.json()
 }
 
-const allQuestions = await getQuestions();
+const allQuestions = await getQuestions();//sets a variable for all my data in my placeholder json
 console.log(allQuestions)
 
-let currentPlayer = 1;
+let currentPlayer = 1; //player turn and point holder
 let scores = { player1: 0, player2: 0 };
 
 function findQuestion(category, value, round) {
@@ -41,7 +41,7 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
         const round = this.hasAttribute('data-round') ? 'second' : 'first';
         const question = findQuestion(category, value, round);
 
-        //question display to hide categories and show question plus answer form
+        //hides categories and shows question plus answer form
         document.getElementById('questionForm').style.display = 'block';
         document.getElementById('inputQuestion').innerText = question.question;
         document.querySelector('.catboard').style.display = 'none';
@@ -50,22 +50,45 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
 });
 
 function submitAnswer() {
-    const userAnswer = document.getElementById('answerInput').value.toLowerCase();
-    const correctAnswer = allQuestions.find(q => q.question.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
+    const submitButton = document.getElementById('submitAnswer')
+    const answerInput = document.getElementById('answerInput')
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const answerValue = answerInput.value.toLowerCase();;
+        console.log(answerValue)
+    
+    const correctAnswer = allQuestions.find(q => q.questions.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
 
-    if (userAnswer === correctAnswer) {
+    if (answerValue === correctAnswer) {
         alert('Correct!');
 
         //increment player score
         scores[`player${currentPlayer}`] += 1;
         document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
         
-    } else {
+    } else if (answerValue !== correctAnswer) {
         alert('Wrong Answer!')
+        scores[`player${currentPlayer}`] -= 1;
+        document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
+    } else {
+        const passButton = document.getElementById('passQuestion');
+        passButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            findQuestion();
+        })
     }
+    })
 }
+submitAnswer();
 
-
+function switchPlayer() { //function to switch player turn
+    if (currentPlayer === 1) {
+        currentPlayer = 2;
+    } else {
+        currentPlayer = 1;
+    }
+    document.getElementById('player-turn').innerText = `Player ${currentPlayer}'s Turn`;
+}
 
 
 
@@ -105,3 +128,6 @@ think about state machine when implementing score up or down
 // import placeholderQuestions from "../placeholder-questions.json";
 //use your catboard div to hide your jeopardy board and display the question + answer box
 //write out your player points so that it just adds one point then find where that value of the question lays and use that
+
+
+

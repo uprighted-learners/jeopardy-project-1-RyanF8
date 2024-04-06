@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1 class="title">First Round</h1>
-    <h3>Player Turn</h3>
+    <h3 id="player-turn">Player 1's turn</h3>
 
     <div class="catboard"> 
       <ul class="category">
@@ -121,12 +121,12 @@
       </ul>
     </div>
 
-    <div id="questionForm" style="display: none">
+    <form id="questionForm" style="display: none">
       <div id="inputQuestion">Question should be here</div>
       <input type="text" id="answerInput" placeholder="Player Answer" />
-      <button onclick="submitAnswer()">Submit</button>
-      <button onclick="passQuestion()">Pass</button>
-    </div>
+      <button id="submitAnswer">Submit</button>
+      <button id="passQuestion">Pass</button>
+    </form>
 
     <div id="players">
       <div>Player 1 Score: <span id="player1-score">0</span></div>
