@@ -241,17 +241,12 @@
       </ul>
     </div>
 
-    <form id="answerForm">
-      <label for="inputAnswer">Player Answer</label>
-      <input type="text" id="input" placeholder="Player Answer" />
-      <button id="submitButton" type="Submit">Submit</button>
-      <button id="passButton" type="pass">Pass</button>
+    <form id="questionForm" style="display: none">
+      <div id="inputQuestion">Question should be here</div>
+      <input type="text" id="answerInput" placeholder="Player Answer" />
+      <button onclick="submitAnswer()">Submit</button>
+      <button onclick="passQuestion()">Pass</button>
     </form>
-    
-    <!-- <div class="buttons">
-      <button><h4 id="guess">Submit Answer</h4></button>
-      <button><h4 id="pass">Pass Turn</h4></button>
-    </div> -->
 
     <div class="players">
       <p id="player1">Player 1 Score: 0</p>

@@ -6,6 +6,9 @@ async function getQuestions() {
 const allQuestions = await getQuestions();
 console.log(allQuestions)
 
+let currentPlayer = 1;
+let scores = { player1: 0, player2: 0 };
+
 function findQuestion(category, value, round) {
     const questions = allQuestions[category];
     const questionValue = parseInt(value, 10);
@@ -28,19 +31,6 @@ function findQuestion(category, value, round) {
     return questions[questionIndex];
 }
 
-function findAnswer(answer, value, round) {
-    const answers = allQuestions[answer]
-    const answerValue = parseInt(value, 10)
-    const half = answers.length / 2;
-    let answerIndex;
-
-    if (round === 'first') {
-        answerIndex = index % half;
-    } else {
-        answerIndex = Math.floor(index / 2) + half;
-    }
-    return answers[answerIndex]
-}
 
 // Add event listeners to each button
 document.querySelectorAll('button[data-category][data-value]').forEach(button => {
@@ -51,13 +41,37 @@ document.querySelectorAll('button[data-category][data-value]').forEach(button =>
         const round = this.hasAttribute('data-round') ? 'second' : 'first';
         const question = findQuestion(category, value, round);
 
-        // Now, display the question - Replace this alert with your actual display logic.
+        //question display to hide categories and show question plus answer form
         document.getElementById('questionForm').style.display = 'block';
         document.getElementById('inputQuestion').innerText = question.question;
         document.querySelector('.catboard').style.display = 'none';
         
     });
 });
+
+function submitAnswer() {
+    const userAnswer = document.getElementById('answerInput').value.toLowerCase();
+    const correctAnswer = allQuestions.find(q => q.question.toLowerCase() === document.getElementById('inputQuestion').innerText.toLowerCase()).answerInput.toLowerCase();
+
+    if (userAnswer === correctAnswer) {
+        alert('Correct!');
+
+        //increment player score
+        scores[`player${currentPlayer}`] += 1;
+        document.getElementById("player" + currentPlayer + "-score").innerText = scores["player" + currentPlayer];
+        
+    } else {
+        alert('Wrong Answer!')
+    }
+}
+
+
+
+
+
+
+
+
 
 /*showing which player turn it is,
 on box click display question,

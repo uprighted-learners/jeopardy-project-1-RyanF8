@@ -121,26 +121,19 @@
       </ul>
     </div>
 
-    <form id="questionForm" style="display: none">
+    <div id="questionForm" style="display: none">
       <div id="inputQuestion">Question should be here</div>
       <input type="text" id="answerInput" placeholder="Player Answer" />
       <button onclick="submitAnswer()">Submit</button>
       <button onclick="passQuestion()">Pass</button>
-    </form>
+    </div>
 
-    <!-- <div class = "buttons">
-        <button><h4 id = "submitAnswer"> Submit Answer</h4></button>
-        <button><h4 id = "passTurn"> Pass Turn</h4></button>
-    </div> -->
-
-    <div class="players">
-      <p id="player1-score">Player 1 Score: 0</p>
-      <p id="player2-score">Player 2 Score: 0</p>
+    <div id="players">
+      <div>Player 1 Score: <span id="player1-score">0</span></div>
+      <div>Player 2 Score: <span id="player2-score">0</span></div>
     </div>
 
     <a id="round2" href="secondround.html"> Next Round </a>
-
-    <h3 id="playerTurn">Player 1's Turn</h3>
 
     <footer class="footer">
       <a href="homePage.html"> Home Page </a>

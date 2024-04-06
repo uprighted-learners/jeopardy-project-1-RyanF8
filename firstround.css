@@ -135,30 +135,25 @@ li {
     border: 1px solid black;
 }
 
-#answerForm {
+#questionForm {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 2vh;
     padding: 1vw;
     font-size: 2rem;
+    background-color: aliceblue;
+}
+#answerInput {
+    font-size: 1.2rem;
+}
+#questionForm button {
+    font-size: 1.2rem;
 }
 
-#input{
-    font-size: 1rem;
-    padding: 1vw;
-    margin-left: 2vw;
-}
-#submitButton {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    font-size: large;
-}
-#passButton {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    font-size: large;
-}
+
+
+
 
 /* #answerForm {
     display: flex;
@@ -187,23 +182,13 @@ li {
     margin: 1rem;
 }
 
-.players {
+#players {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
     margin-left: 10vw;
     margin-right: 10vw;
     font-size: 2rem;
-    
-}
-
-#player1 {
-    background-color: lightblue;
-    padding: 1vw;
-}
-#player2 {
-    background-color: lightblue;
-    padding: 1vw;
 }
 
 #round2 {
