@@ -32,6 +32,7 @@ function findQuestion(category, value, round) {
 }
 
 
+
 // Add event listeners to each button
 document.querySelectorAll('button[data-category][data-value]').forEach(button => {
     button.addEventListener('click', function () {
@@ -138,6 +139,20 @@ think about state machine when implementing score up or down
 // import placeholderQuestions from "../placeholder-questions.json";
 //use your catboard div to hide your jeopardy board and display the question + answer box
 //write out your player points so that it just adds one point then find where that value of the question lays and use that
+
+//  if (round === 'first') { // if else statement if I can get my answer fuunction to work
+//         // Use the first half of questions for the first round.
+//         questionIndex = index % half;
+//     } else if (round === 'second') {
+//         // Use the second half of questions for the second round.
+//         questionIndex = Math.floor(index / 2) + half;
+//     } else {
+//         questionIndex = questionIndex.at(questionIndex.length - 1)
+//     }
+//     console.log(questionIndex.at(questionIndex.length - 1))
+
+//     return questions[questionIndex];
+// }
 
 
 
