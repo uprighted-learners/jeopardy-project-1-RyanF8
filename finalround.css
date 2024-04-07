@@ -23,26 +23,46 @@ h3 {
     font-size: 2rem;
     margin-bottom: 4rem;
 }
-
 #questionForm {
+    display: flex;
     text-align: center;
     justify-content: center;
     margin-top: 2vh;
+    padding: 1vw;
+    font-size: 2rem;
+    background-color: aliceblue;
+}
+
+#betForm1 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 1rem;
     margin-left: 20px;
     margin-right: 20px;
     padding: 1vw;
     font-size: 2rem;
     background-color: aliceblue;
 }
-#answerInput {
-    font-size: 1.2rem;
+#betForm2 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1vw;
+    font-size: 2rem;
+    background-color: aliceblue;
 }
-#questionForm button {
-    font-size: 1.2rem;
+#betAmount {
+    font-size: 1.5vh;
 }
-
-#passTurn {
-    margin: 1rem;
+#submitBet1 {
+    font-size: 1.5vh;
+}
+#submitBet2 {
+    font-size: 1.5vh;
 }
 
 #players {
@@ -54,75 +74,30 @@ h3 {
     font-size: 2rem;
 }
 
-
-
-/* .finalc {
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    margin-top: 2rem;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    padding: 1vw;
-    background-color: lightgray;
-}
-
-.finalq {
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    margin-top: 1rem;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    padding: 5vw;
-    background-color: lightgray;
-} */
-
-.answer-box {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(1, 20vh);
-    grid-template-rows: repeat(3, 4vh);
-    margin-top: 3vh;
-    
-}
-
-.point {
-    padding: 1vh;
-    color: gray;
-    border: solid black;
-    background-color: aliceblue;
-}
-.answer {
-    padding: 1vh;
-    color: gray;
-    border: solid black;
-    background-color: aliceblue;
-}
-
 .final-bet {
     display: flex;
     justify-content: center;
 }
-.bet {
-    padding: 1vw 2vh;
-    font-size: 2vh;
-    border: 3px solid black;
+#player1Bet {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+#player2Bet {
+    margin-top: 1rem;
+    font-size: 1.5rem;
 }
 
 .footer {
     display: grid;
     grid-template-columns: repeat(4, 20vw);
-    margin-top: 15vw;
-    margin-right: 20px;
-    margin-left: 20px;
+    justify-content: space-evenly;
     padding: 1vw;
     background-color: antiquewhite;
-    position: relative;
     text-align: center;
-    top: 23vh;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    
+    width: 100%;
 }
 
 .footer a{

@@ -172,25 +172,42 @@ li {
     background-color: aliceblue;
     padding: 1vw;
     text-decoration: none;
+    border: 2px solid black;
+}
+
+#clearScoresButton {
+    display: flex;
+    position: absolute;
+    margin-top: 15vh;
+    right: 3vw;
+    background-color: aliceblue;
+    padding: 1vw;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .footer {
     display: grid;
     grid-template-columns: repeat(4, 20vw);
-    margin-top: 15vw;
-    margin-right: 20px;
-    margin-left: 20px;
+    justify-content: space-evenly;
     padding: 1vw;
     background-color: antiquewhite;
-    position: relative;
     text-align: center;
-    top: 15vh;
+    position: fixed;
+    left: 0;
     bottom: 0;
+    width: 100%;
 }
+
 
 .footer a{
     text-decoration: none;
     color: darkblue;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 

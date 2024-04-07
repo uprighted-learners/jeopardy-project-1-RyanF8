@@ -41,16 +41,14 @@ body {
 .footer {
     display: grid;
     grid-template-columns: repeat(4, 20vw);
-    margin-top: 15vw;
-    margin-right: 20px;
-    margin-left: 20px;
+    justify-content: space-evenly;
     padding: 1vw;
     background-color: antiquewhite;
-    position: relative;
     text-align: center;
-    top: 10vh;
+    position: fixed;
+    left: 0;
     bottom: 0;
-    
+    width: 100%;
 }
 
 
