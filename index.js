@@ -1,3 +1,4 @@
+export let scores = { player1: 0, player2: 0 }
 // Define async function to fetch questions
 async function getQuestions() {
     let fetchReturn = await fetch('./placeholderQuestions.json');
@@ -5,7 +6,7 @@ async function getQuestions() {
 }
 
 
-
+initializeGame()
 // Define function to initialize the game
 async function initializeGame() {
     // Fetch questions
@@ -33,8 +34,10 @@ async function initializeGame() {
 
         if (round === 'first') {
             questionIndex = index % half;
-        } else {
+        } else if (round === 'second') {
             questionIndex = Math.floor(index / 2) + half;
+        } else {
+            throw new Error('no longer on page 1 or 2')
         }
 
         return questions[questionIndex];
@@ -67,7 +70,7 @@ async function initializeGame() {
             clickedBoxes++;
             console.log(clickedBoxes)
             
-            //check if all boxes are clicked and enable my next round button(need to make this)
+            //check if all boxes are clicked and enable my next round button(couldnt get this to work)
             // if (clickedBoxes !== totalBoxes) {
             //     document.getElementById('round2').style.display = 'none';
             // } else {
@@ -76,12 +79,12 @@ async function initializeGame() {
         });
     });
 
-    function submitAnswer() {
+    function submitAnswer() {//function to handle my answer submissions
         const submitButton = document.getElementById('submitAnswer');
         const answerInput = document.getElementById('answerInput');
         const passButton = document.getElementById('passQuestion');
 
-        passButton.addEventListener('click', (event) => {//if pass is press then switch player
+        passButton.addEventListener('click', (event) => {//if pass is pressed then switch player
             event.preventDefault();
             switchPlayer();
         });
@@ -114,6 +117,7 @@ async function initializeGame() {
             document.querySelector('.catboard').style.display = 'grid';
         });
     }
+    
 
     function switchPlayer() { //function to switch player turn
         if (currentPlayer === 1) {
@@ -124,7 +128,7 @@ async function initializeGame() {
         document.getElementById('player-turn').innerText = `Player ${currentPlayer}'s Turn`;
     }
 
-    function loadScoresFromStorage() {
+    function loadScoresFromStorage() {//function to handle scores stored in the server
         const storedScores = localStorage.getItem('playerScores');
         if (storedScores) {
             scores = JSON.parse(storedScores);
@@ -150,13 +154,14 @@ async function initializeGame() {
         localStorage.removeItem('playerScores');
     }
     document.getElementById("clearScoresButton").addEventListener("click", clearScores);
-
-    // Call submitAnswer function to initialize it
+    
     submitAnswer();
 }
-export let scores = { player1: 0, player2: 0 } 
-// Call the function to initialize the game
-initializeGame();
+
+
+
+
+
 
 
 
