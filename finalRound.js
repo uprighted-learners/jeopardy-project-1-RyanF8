@@ -53,7 +53,7 @@ async function initializeFinalRound() {
         scores.player2Bet = betValue2;
         document.getElementById('inputQuestion').innerText = finalQuestion;
         document.getElementById('questionForm').style.display = 'block';
-        document.getElementById('player-turn').innerText = "Both Players, answer the question!";
+        document.getElementById('player-turn').innerText = "Player 1's Turn to Answer";
     });
 
     // Handle final answer submission
@@ -62,34 +62,35 @@ async function initializeFinalRound() {
     submitFinalAnswer.addEventListener('click', (event) => {
         event.preventDefault();
         const answer = answerInput.value.toLowerCase();
+        if (document.getElementById('player-turn').innerText.includes("Player 1")) {
+            processAnswer(answer, finalAnswer, "player1", scores.player1Bet);
+            document.getElementById('player-turn').innerText = "Player 2's Turn to Answer";
+            answerInput.value = '';
+        } else {
+            processAnswer(answer, finalAnswer, "player2", scores.player2Bet);
+            finalizeRound();
+        }
+    });
+
+    // Function to process the answer for a player
+    function processAnswer(answer, finalAnswer, player, bet) {
         if (answer === finalAnswer) {
-            if (scores.player1Bet) {
-                scores.player1 += scores.player1Bet;
-            }
-            if (scores.player2Bet) {
-                scores.player2 += scores.player2Bet;
-            }
+            scores[player] += bet;
             alert('Correct answer!');
         } else {
-            if (scores.player1Bet) {
-                scores.player1 -= scores.player1Bet;
-            }
-            if (scores.player2Bet) {
-                scores.player2 -= scores.player2Bet;
-            }
+            scores[player] -= bet;
             alert('Incorrect answer!');
         }
-        // Update scores displayed on the page
-        document.getElementById('player1-score').innerText = scores.player1;
-        document.getElementById('player2-score').innerText = scores.player2;
+        document.getElementById(`${player}-score`).innerText = scores[player];
+    }
+
+    // Function to finalize the round
+    function finalizeRound() {
         // Save updated scores to localStorage
         saveScoresToStorage();
-        scores.player1Bet = 0;
-        scores.player2Bet = 0;
-        answerInput.value = '';
         document.getElementById('questionForm').style.display = 'none';
         document.getElementById('player-turn').innerText = "Game Over!";
-    });
+    }
 
     // Function to handle the winner
     const endGameButton = document.getElementById('endGame');
