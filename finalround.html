@@ -1,41 +1,51 @@
+<!-- finalround.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Round</title>
-    <link href = "finalround.css" rel = "stylesheet">
-</head>
-<body>
-    <h1 class = "title"> Final Round </h1>
+    <link href="finalround.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 class="title">Final Round</h1>
 
     <h3 id="player-turn">Player 1's turn</h3>
 
     <form id="questionForm" style="display: none">
-        <div id="inputQuestion">Question should be here</div>
-        <input type="text" id="answerInput" placeholder="Player Answer" />
-        <button id="submitAnswer">Submit</button>
-        <button id="passQuestion">Pass</button>
+      <div id="inputQuestion">Question should be here</div>
+      <input type="text" id="answerInput" placeholder="Player Answer" />
+      <button id="submitAnswer">Submit</button>
     </form>
 
     <form id="betForm1">
-        <div class="betAmount">
-            <label for ="betAmount1">Point Bet Amount Player 1:</label>
-            <input type="number" id="betAmount1" placeholder="Enter bet amount..." required>
-        </div>
-        <button id="submitBet1" type="submit">Submit</button>
+      <div class="betAmount">
+        <label for="betAmount1">Point Bet Amount Player 1:</label>
+        <input
+          type="number"
+          id="betAmount1"
+          placeholder="Enter bet amount..."
+          required
+        />
+      </div>
+      <button id="submitBet1" type="submit">Submit</button>
     </form>
-    <form id="betForm2">
-        <div class="betAmount">
-            <label for="betAmount2">Point Bet Amount Player 2:</label>
-            <input type="number" id="betAmount2" placeholder="Enter bet amount..." required>
-        </div>
-        <button id="submitBet2" type="submit">Submit</button>
+    <form id="betForm2" style="display: none">
+      <div class="betAmount">
+        <label for="betAmount2">Point Bet Amount Player 2:</label>
+        <input
+          type="number"
+          id="betAmount2"
+          placeholder="Enter bet amount..."
+          required
+        />
+      </div>
+      <button id="submitBet2" type="submit">Submit</button>
     </form>
 
     <div id="players">
-        <div>Player 1 Score: <span id="player1-score">0</span></div>
-        <div>Player 2 Score: <span id="player2-score">0</span></div>
+      <div>Player 1 Score: <span id="player1-score">0</span></div>
+      <div>Player 2 Score: <span id="player2-score">0</span></div>
     </div>
 
     <div id="player1Bet"></div>
@@ -44,18 +54,16 @@
     <button id="clearScoresButton" style="display: none">Clear Scores</button>
 
     <div id="button-container">
-        <button id="endGame">End Game</button>
+      <button id="endGame">End Game</button>
     </div>
 
-    <footer class = "footer">
-        <a href = "homePage.html"> Home Page </a>
-        <a href = "#"> What To Expect </a>
-        <a href = "#"> Meet The Team </a>
-        <a href = "#"> About Us </a>
-        
+    <footer class="footer">
+      <a href="homePage.html">Home Page</a>
+      <a href="#">What To Expect</a>
+      <a href="#">Meet The Team</a>
+      <a href="#">About Us</a>
     </footer>
 
-    <script type="module" src = "./finalRound.js"> </script>
-</body>
-</html>   
-
+    <script type="module" src="./finalRound.js"></script>
+  </body>
+</html>
