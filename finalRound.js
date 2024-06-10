@@ -1,4 +1,3 @@
-// finalround.js
 // Import scores from index.js
 import { scores } from './index.js';
 
